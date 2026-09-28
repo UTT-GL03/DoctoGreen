@@ -21,3 +21,23 @@ Cette numérisation a permis d’accéder en tout temps à la possibilité de pr
 L’application la plus populaire en France estime avoir 17 millions de rendez-vous pris en ligne par mois. Malgré la facilitation de la prise de rendez-vous, il n’y a pas eu d’effet rebond car il y a un plafond qui correspond au nombre de médecins, qui stagne voire décroît. La plateforme à permis d’optimiser les plannings, remplir les annulations et la réduction de la friction de la prise de rendez-vous (prendre rendez-vous quand on veux, ou on veux, pour le motifs qu’on veut.
 
 D’un côté les plateformes de rendez-vous médical ont permis de réduire les déplacements superflues comme pour la prise de rendez-vous, de réduire la consommation de papier et d'encre grâce à la dématérialisation. Mais de l’autre côté, tout cela nécessite maintenant des serveurs, l’utilisation de datacenters pour stocker les données, une augmentation de la consommation électrique et si on remonte la chaîne cela nécessite l'extraction de métaux rares et la fabrication de composants électroniques pour les terminaux utilisés.
+
+## Scénarios d’usage et impacts
+
+Nous faisons l’hypothèse que l’application peut être consultée à n’importe quel moment de la journée.
+## Scénario : “Consulter un médecin généraliste”
+
+- Le patient se rend sur la page de son médecin traitant généraliste (donc sans passer par un moteur de recherche).
+- Il consulte les créneaux disponibles pour un rendez-vous, mais aucun ne lui correspond.
+- Il revient à la page d’accueil.
+- Il cherche un autre médecin avec le moteur de recherche.
+- Il choisit un autre médecin généraliste et consulte ses créneaux.
+
+## Scénario : “Consulter les informations d’un dentiste”
+
+- Le patient ouvre la liste des dentistes dans sa zone
+- Le patient ouvre la page d’un dentiste qui l’intéresse.
+- Il consulte les informations disponibles
+- Il revient sur la liste des dentistes
+- Ouvre un autre profil de dentiste et consulte ses informations
+
