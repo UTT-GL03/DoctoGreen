@@ -41,3 +41,12 @@ Nous faisons l’hypothèse que l’application peut être consultée à n’imp
 - Il revient sur la liste des dentistes
 - Ouvre un autre profil de dentiste et consulte ses informations
 
+## Impact de l'exécution des scénarios auprès de différents services concurrents
+
+L'EcoIndex d'une page (de A à G) est calculé (sources : EcoIndex, Octo, GreenIT) en fonction du positionnement de cette page parmi les pages mondiales concernant :
+
+le nombre de requêtes lancées,
+le poids des téléchargements,
+le nombre d'éléments du document.
+
+Nous avons choisi de comparer l'impact des scénarios sur les services de prises de rendez-vous médicaux : Doctolib et Maiia, qui sont les deux seuls services de rendez-vous médicaux en France.
