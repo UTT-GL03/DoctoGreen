@@ -49,14 +49,16 @@ L'EcoIndex d'une page (de A à G) est calculé (sources : GreenIT) en fonction d
 - le poids des téléchargements,
 - le nombre d'éléments du document.
 
-Nous avons choisi de comparer l'impact des scénarios sur les services de prises de rendez-vous médicaux : Doctolib et Maiia, qui sont les deux seuls services de rendez-vous médicaux en France.
+Nous avons choisi de comparer l'impact des scénarios sur les services de prises de rendez-vous médicaux : Doctolib, Maiia et Keldoc, qui sont deux gros services et un plus petit service de rendez-vous médicaux en France.
 
 |                        **Scénario**                       	| **Service** 	| **Score** 	| **Classe** 	|                                            **Détails**                                           	|
 |:---------------------------------------------------------:	|:-----------:	|:---------:	|:----------:	|:------------------------------------------------------------------------------------------------:	|
 | Scénario 1 : Consulter un médecin généraliste             	| Doctolib    	| 21        	| F  🟥      	| Docteur généraliste A : 28 (E)<br>Liste docteurs : 17 (F)<br>Docteur généraliste B : 19 (F)      	|
 |                                                           	| Maiia       	| 20        	| F  🟥      	| Docteur généraliste A : 14 (F)<br>Liste docteurs : 26 (E)<br>Docteur généraliste B : 21 (F)      	|
+|                                                           	| KelDoc       	| 60        	| C  🟥      	| Docteur généraliste A : 14 (F)<br>Liste docteurs : 26 (E)<br>Docteur généraliste B : 21 (F)      	|
 | Scénario 2 : <br>Consulter les informations d’un dentiste 	| Doctolib    	| 33        	| E  🟧      	| Liste dentiste : 33 (E)<br>Dentiste A : 60 (C)<br>Liste dentiste : 26 (E)<br>Dentiste B : 16 (F) 	|
 |                                                           	| Maiia       	| 25        	| E  🟧      	| Liste dentiste : 16 (F)<br>Dentiste A : 30 (E)<br>Liste dentiste : 19 (F)<br>Dentiste B : 35 (E) 	|
+|                                                           	| Keldoc       	| 25        	| E  🟧      	| Liste dentiste : 16 (F)<br>Dentiste A : 30 (E)<br>Liste dentiste : 19 (F)<br>Dentiste B : 35 (E) 	|
 
 Tab.1 : Mesure de l'EcoIndex moyen de services de prise de rendez-vous médicaux.
 
