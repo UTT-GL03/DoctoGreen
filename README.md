@@ -62,7 +62,7 @@ Tab.1 : Mesure de l'EcoIndex moyen de services de prise de rendez-vous médicaux
 
 Les mesures de l'impact moyen de ces services (cf. Tab. 1) révèlent des classes EcoIndex très faibles pour les deux services (E ou F). Dans l’ensemble, on voit que Doctolib possède un meilleur score, mais ils sont relativement proches.
 
-Leurs mauvais score est dû notamment à :
+Leur mauvais score est dû notamment à :
 
 - Beaucoup de domaines différents
 - Beaucoup d'appels de requêtes HTTP pour différents services
