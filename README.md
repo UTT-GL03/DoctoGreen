@@ -53,11 +53,20 @@ Nous avons choisi de comparer l'impact des scénarios sur les services de prises
 
 |                        **Scénario**                       	| **Service** 	| **Score** 	| **Classe** 	|                                            **Détails**                                           	|
 |:---------------------------------------------------------:	|:-----------:	|:---------:	|:----------:	|:------------------------------------------------------------------------------------------------:	|
-| Scénario 1 : Consulter un médecin généraliste             	| Doctolib    	| 21        	| F 🟥       	| Docteur généraliste A : 28 (E)<br>Liste docteurs : 17 (F)<br>Docteur généraliste B : 19 (F)      	|
-|                                                           	| Maiia       	| 20        	| F 🟥       	| Docteur généraliste A : 14 (F)<br>Liste docteurs : 26 (E)<br>Docteur généraliste B : 21 (F)      	|
-| Scénario 2 : <br>Consulter les informations d’un dentiste 	| Doctolib    	| 33        	| E 🟧       	| Liste dentiste : 33 (E)<br>Dentiste A : 60 (C)<br>Liste dentiste : 26 (E)<br>Dentiste B : 16 (F) 	|
-|                                                           	| Maiia       	| 25        	| E 🟧       	| Liste dentiste : 16 (F)<br>Dentiste A : 30 (E)<br>Liste dentiste : 19 (F)<br>Dentiste B : 35 (E) 	|
+| Scénario 1 : Consulter un médecin généraliste             	| Doctolib    	| 21        	| F  🟥      	| Docteur généraliste A : 28 (E)<br>Liste docteurs : 17 (F)<br>Docteur généraliste B : 19 (F)      	|
+|                                                           	| Maiia       	| 20        	| F  🟥      	| Docteur généraliste A : 14 (F)<br>Liste docteurs : 26 (E)<br>Docteur généraliste B : 21 (F)      	|
+| Scénario 2 : <br>Consulter les informations d’un dentiste 	| Doctolib    	| 33        	| E  🟧      	| Liste dentiste : 33 (E)<br>Dentiste A : 60 (C)<br>Liste dentiste : 26 (E)<br>Dentiste B : 16 (F) 	|
+|                                                           	| Maiia       	| 25        	| E  🟧      	| Liste dentiste : 16 (F)<br>Dentiste A : 30 (E)<br>Liste dentiste : 19 (F)<br>Dentiste B : 35 (E) 	|
 
 Tab.1 : Mesure de l'EcoIndex moyen de services de prise de rendez-vous médicaux.
 
-Les mesures de l'impact moyen de ces services (cf. Tab.1) révèlent des classes EcoIndex très faibles pour les deux services (E ou F).
+Les mesures de l'impact moyen de ces services (cf. Tab. 1) révèlent des classes EcoIndex très faibles pour les deux services (E ou F). Dans l’ensemble, on voit que Doctolib possède un meilleur score, mais ils sont relativement proches.
+
+Leur mauvais score est dû notamment à :
+
+- Beaucoup de domaines différents
+- Beaucoup d'appels de requêtes HTTP pour différents services
+- Des ressources statiques
+- Une vingtaine de fichiers CSS à charger
+
+Sur les deux sites, le cache permet de grandement améliorer le score. Pour améliorer le score sans le cache, il faut surtout optimiser le site en réduisant le nombre de requêtes HTTP pour différents services et réduire le nombre de fichiers CSS.
