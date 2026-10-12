@@ -107,6 +107,15 @@ Basé sur l'abonnement mensuel de Maiia (https://www.getapp.fr/software/161411/m
 Basé sur le coût total employeur du salaire médian 2026 soit 3507€ environ (source : URSSAF). 
 
 Par conséquent, pour réduire l’impact écologique, nous proposons de :   
-\- Travailler l'optimisation des fichiers CSS
-\- Travailler l'optimisation des requêtes HTTP
-\- Travailler l'optimisation du nombre de domaines
+- Travailler l'optimisation des fichiers CSS
+- Travailler l'optimisation des requêtes HTTP
+- Travailler l'optimisation du nombre de domaines
+
+## Maquette de l'interface et échantillon de données
+
+Au vu des différents services comparés, des exigences environnementales données plus haut et des scénarios mis en place, nous allons définir pour notre prototype une maquette de l'interface et un échantillon de données réalistes.
+
+Selon les standards du Web, nos « écrans » sont la représentation HTML des types de ressources du domaine :
+* Un annuaire des praticiens (avec une HTTP-URI qui a pour chemin `/`) ou plus spécifiquement avec une barre de recherche permettant un affichage plus précis (avec pour chemin `/?search={type||name}`),
+* Un praticien en particulier (avec pour chemin `/{id}`
+
