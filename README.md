@@ -99,7 +99,7 @@ L’étude de l’offre des services de prises de rendez-vous médicaux nous a p
 
 | Source possible de revenus | Montant unitaire | Quantité nécessaire pour financer un salaire |
 | :---- | :---- | :---- |
-| Abonnement premium | 69 € | 50,8 praticiens |
+| Abonnement premium | 69 € | 50,8 |
 
 Basé sur l'abonnement mensuel de Maiia (https://www.getapp.fr/software/161411/maiia)  
 Basé sur le coût total employeur du salaire médian 2026 soit 3507€ environ (source : URSSAF). 
