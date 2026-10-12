@@ -74,3 +74,37 @@ Leur mauvais score est dû notamment à :
 - Une vingtaine de fichiers CSS à charger
 
 Sur les sites, le cache permet de grandement améliorer le score. Pour améliorer le score sans le cache, il faut surtout optimiser le site en réduisant le nombre de requêtes HTTP pour différents services et réduire le nombre de fichiers CSS. Keldoc permet d'avoir un meilleur score car il n'envoie pas de requêtes de pub ou de tracker, il est plus petit et possède moins de fonctionnalitées.
+
+## Modèle économique
+
+Comme nous l'avons vu dans la section précédente, les mauvais scores EcoIndex de Doctolib, Maiia et ClickDoc viennent en grande partie de choix de conception : multiplication des domaines, nombreuses requêtes HTTP, et une vingtaine de fichiers CSS. Keldoc, qui n'envoie ni requêtes publicitaires ni traceurs et propose moins de fonctionnalités, obtient le meilleur score. Ces choix sont liés au modèle économique de chaque service.
+
+Notons d'abord que le marché de la prise de rendez-vous médicaux en ligne est concurrentiel de droit, mais pas de fait. N'importe quel éditeur peut entrer sur le marché, et il existe une dizaine de solutions. Pourtant, Doctolib domine largement. La plateforme revendique plus de 400 000 professionnels de santé abonnés et une présence dans plusieurs pays européens. La domination de Doctolib s'explique simplement par le fait que les patients vont sur la plateforme où se trouvent le plus de praticiens, et les praticiens s'abonnent à la plateforme où se trouvent le plus de patients.
+
+\- un accès gratuit pour les patients (recherche, consultation des créneaux, prise de rendez-vous) ;  
+\- un abonnement mensuel payé par les professionnels de santé, avec des modules optionnels.
+
+| Service | Offre de base | Modules complémentaires |
+| :---: | ----- | ----- |
+| Doctolib | Agenda Prise de RDV en ligne 24h/24 Rappels SMS/mail Liste d’attente | Logiciel Doctolib Médecin Téléconsultation Assistant de consultation IA Assistant téléphonique IA Aide à la prescription Vidal Expert |
+| Maiia | Agenda Prise de RDV en ligne 24h/24 Rappels SMS/mail Espace patient | Logiciel Maiia Médecin Téléconsultation / télésoin •  Secrétariat IA Téléexpertise Maiia Compta, Maiia Bilan Messagerie Maiia Connect |
+| Clickdoc | Agenda en ligne Prise de RDV en ligne Rappels SMS  | Téléconsultation Télésecrétariat Assistant de consultation IA Assistant téléphonique IA |
+| Keldoc | Agenda Prise de RDV en ligne Visibilité en ligne Rappels SMS | RDV en téléconsultation •  Portail Praticiens Portail Patients Référencement Pages Jaunes |
+
+\*Tab. 2 : Offre des services de prise de rendez-vous médicaux.\*
+
+Certains acteurs se démarquent avec les modules complémentaires apportés ainsi que les prix mais aussi par le nombre de patient moyen utilisant la plateforme.
+
+L’étude de l’offre des services de prises de rendez-vous médicaux nous a permis d’identifier qu’il n’existe qu’une seule source de revenus qui est l’offre Premium, qui parfois est accompagnée de modules complémentaires.
+
+| Source possible de revenus | Montant unitaire | Quantité nécessaire pour financer un salaire |
+| :---- | :---- | :---- |
+| Abonnement premium | 69 € | 50,8 praticiens |
+
+Basé sur l'abonnement mensuel de Maiia (https://www.getapp.fr/software/161411/maiia)  
+Basé sur le coût total employeur du salaire médian 2026 soit 3507€ environ (source : URSSAF). 
+
+Par conséquent, pour réduire l’impact écologique, nous proposons de :   
+\- Travailler l'optimisation des fichiers CSS
+\- Travailler l'optimisation des requêtes HTTP
+\- Travailler l'optimisation du nombre de domaines
