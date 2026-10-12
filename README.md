@@ -86,10 +86,10 @@ Notons d'abord que le marché de la prise de rendez-vous médicaux en ligne est 
 
 | Service | Offre de base | Modules complémentaires |
 | :---: | ----- | ----- |
-| Doctolib | Agenda Prise de RDV en ligne 24h/24 Rappels SMS/mail Liste d’attente | Logiciel Doctolib Médecin Téléconsultation Assistant de consultation IA Assistant téléphonique IA Aide à la prescription Vidal Expert |
-| Maiia | Agenda Prise de RDV en ligne 24h/24 Rappels SMS/mail Espace patient | Logiciel Maiia Médecin Téléconsultation / télésoin •  Secrétariat IA Téléexpertise Maiia Compta, Maiia Bilan Messagerie Maiia Connect |
-| Clickdoc | Agenda en ligne Prise de RDV en ligne Rappels SMS  | Téléconsultation Télésecrétariat Assistant de consultation IA Assistant téléphonique IA |
-| Keldoc | Agenda Prise de RDV en ligne Visibilité en ligne Rappels SMS | RDV en téléconsultation •  Portail Praticiens Portail Patients Référencement Pages Jaunes |
+| Doctolib | Agenda; Prise de RDV en ligne 24h/24; Rappels SMS/mail; Liste d’attente | Logiciel Doctolib Médecin; Téléconsultation; Assistant de consultation IA ;Assistant téléphonique IA; Aide à la prescription; Vidal Expert |
+| Maiia | Agenda; Prise de RDV en ligne 24h/24; Rappels SMS/mail; Espace patient | Logiciel Maiia Médecin; Téléconsultation / télésoin;  Secrétariat IA ;Téléexpertise Maiia Compta; Maiia Bilan; Messagerie Maiia Connect |
+| Clickdoc | Agenda en ligne; Prise de RDV en ligne; Rappels SMS  | Téléconsultation; Télésecrétariat; Assistant de consultation IA; Assistant téléphonique IA |
+| Keldoc | Agenda; Prise de RDV en ligne; Visibilité en ligne; Rappels SMS | RDV en téléconsultation;  Portail Praticiens; Portail Patients; Référencement Pages Jaunes |
 
 Tab. 2 : Offre des services de prise de rendez-vous médicaux.
 
