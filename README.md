@@ -91,7 +91,7 @@ Notons d'abord que le marché de la prise de rendez-vous médicaux en ligne est 
 | Clickdoc | Agenda en ligne Prise de RDV en ligne Rappels SMS  | Téléconsultation Télésecrétariat Assistant de consultation IA Assistant téléphonique IA |
 | Keldoc | Agenda Prise de RDV en ligne Visibilité en ligne Rappels SMS | RDV en téléconsultation •  Portail Praticiens Portail Patients Référencement Pages Jaunes |
 
-\*Tab. 2 : Offre des services de prise de rendez-vous médicaux.\*
+Tab. 2 : Offre des services de prise de rendez-vous médicaux.
 
 Certains acteurs se démarquent avec les modules complémentaires apportés ainsi que les prix mais aussi par le nombre de patient moyen utilisant la plateforme.
 
@@ -100,6 +100,8 @@ L’étude de l’offre des services de prises de rendez-vous médicaux nous a p
 | Source possible de revenus | Montant unitaire | Quantité nécessaire pour financer un salaire |
 | :---- | :---- | :---- |
 | Abonnement premium | 69 € | 50,8 |
+
+Tab. 3 : Source de revenus possibles pour le service d'une plateforme de rendez-vous médicaux.
 
 Basé sur l'abonnement mensuel de Maiia (https://www.getapp.fr/software/161411/maiia)  
 Basé sur le coût total employeur du salaire médian 2026 soit 3507€ environ (source : URSSAF). 
