@@ -81,3 +81,19 @@ main {
     flex: 1;
   }
 }
+.timeslot-grid {
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  gap: 1rem;
+}
+
+.timeslot {
+  min-height: 8rem;
+  margin: 0;
+  padding: 1rem;
+  white-space: normal;
+  overflow-wrap: break-word;
+}
+
+.timeslot span {
+  display: block;
+}
