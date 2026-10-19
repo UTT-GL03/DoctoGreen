@@ -1,0 +1,21 @@
+{
+  "praticiens": [
+    {{#repeat min=20 max=30}}
+    {
+      "id": "{{guid}}",
+      "name": "{{firstName}} {{lastName}}",
+      "type": "{{random 'Médecin généraliste' 'Chirurgien' 'Dentiste' 'Dermatologue' 'Kinésithérapeute' 'Infirmier' 'Allergologue' 'Psychologue'}}",
+      "description": "{{lorem min=10 max=60}}",
+      "creneaux": [
+        {{#repeat min=3 max=10}}
+        {
+          "date": "{{date '2026-10-13' '2026-11-30' 'YYYY-MM-DD'}}",
+          "heure": "{{random '08:00' '08:30' '09:00' '09:30' '10:00' '10:30' '11:00' '11:30' '14:00' '14:30' '15:00' '15:30' '16:00' '16:30' '17:00' '17:30'}}",
+          "patientName": "{{firstName}} {{lastName}}"
+        }
+        {{/repeat}}
+      ]
+    }
+    {{/repeat}}
+  ]
+}
