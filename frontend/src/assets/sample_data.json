@@ -1,0 +1,23 @@
+{
+  "doctors": [
+    {
+      "id": 1,
+      "surname": "Dr.",
+      "lastname": "Smith",
+      "type": "Cardiologist",
+      "description": "Dr. Smith is a highly experienced cardiologist with over 15 years of practice in the field. He specializes in diagnosing and treating heart conditions, including arrhythmias, heart failure, and coronary artery disease. Dr. Smith is known for his compassionate approach to patient care and his commitment to staying updated with the latest advancements in cardiology.",
+      "creneaux": [
+        {
+          "day": "Monday",
+          "start_time": "09:00",
+          "end_time": "12:00"
+        },
+        {
+          "day": "Wednesday",
+          "start_time": "14:00",
+          "end_time": "18:00"
+        }
+      ]
+    }
+  ]
+}
