@@ -119,3 +119,12 @@ Selon les standards du Web, nos « écrans » sont la représentation HTML des t
 * Un annuaire des praticiens (avec une HTTP-URI qui a pour chemin `/`) ou plus spécifiquement avec une barre de recherche permettant un affichage plus précis (avec pour chemin `/?search={type||name}`),
 * Un praticien en particulier (avec pour chemin `/{id}`
 
+![Maquette de l'annuaire des praticiens](./docs/mockup_1.png)
+__Fig. 1__: Maquette de l'interface du prototype : Annuaire des praticiens.
+
+
+![Maquette de l'annuaire des praticiens](./docs/mockup_2.png)
+__Fig. 2__: Maquette de l'interface du prototype : Profil d'un praticient.
+
+Pour des raisons de respect des droits d'auteurs, nous utilisons des données générées (avec [`dummy-json`](https://github.com/webroo/dummy-json/blob/master/README.md)).
+Bien que fictives, ces données correspondent à la structure des services concurrents : les praticiens ont un nom, un type de pratique, une description, ainsi que des créneaux occupés par des patients qui ont un nom.(voir [modèle de données](https://github.com/UTT-GL03/DoctoGreen/blob/main/praticien_data.hbs)).
