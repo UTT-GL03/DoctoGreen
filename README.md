@@ -1,22 +1,25 @@
 # DoctoGreen - Réduction de l'impact écologique du service numérique de prise de rendez-vous médical
+
 Thomas CHARPENTIER
 Alexis ZOTT
 
 ## Choix du sujet
+
 Pour nous, le droit d’accès à la santé est un droit fondamental. La problématique des “déserts médicaux” ne cessent d’augmenter en France rendant l’accès à un professionnel de santé beaucoup plus compliqué. Selon nous, il est d’une grande importance d’avoir une facilité de pouvoir prendre rendez-vous avec un professionnel de santé proche et habilité à prendre en charge nos soucis médicaux.
 
 En moyenne, 17 millions de rendez-vous sont pris par mois sur la plateforme principale de rendez-vous médicaux Doctolib. (Source : Doctolib)
 
 ## Utilité sociale
+
 A une époque où la situation médicale est de plus en plus tendue et où il y a des pénurie de médecin, les aider à optimiser leur temps pour qu’un maximum de patient puissent être soigné est primordial. La santé est un sujet qui concerne tout le monde, toutes les zones géographiques et toutes les tranches d’âges, c’est donc un enjeux très important.
 
 Les applications de prises de rendez-vous médical permettent également aux patients d’avoir une réduction de stress (anxiété des appels téléphoniques par exemple), de pouvoir s’organiser plus efficacement en pré visualisant et choisissant eux-mêmes les créneau disponible. C’est un gain de temps précieux pour les deux parties.
 
 ## Effets de la numérisation
-L’effet de la numérisation de la prise de rendez-vous médicaux a entraîné une substitution partielle du contact humain entre les secrétariats médicaux et les patients, réduisant les déplacements des patients et les communications téléphoniques. 
 
-Cette numérisation a permis d’accéder en tout temps à la possibilité de prendre rendez-vous et d’accéder  à une cartographie de l’ensemble des professionnels de santé aux alentours. Cependant, cette diminution du contact avec les secrétariats médicaux a des conséquences, dans un premier temps, il y a les personnes qui sont néophytes ou qui n’ont pas accès au numérique auront beaucoup plus de difficulté à prendre rendez-vous, dans un second temps, le personnel des secrétariats médicaux étaient formées à qualifier l’urgence des situations des rendez-vous, ce que l’algorithme de Doctolib n’est pas en capacité de faire.
+L’effet de la numérisation de la prise de rendez-vous médicaux a entraîné une substitution partielle du contact humain entre les secrétariats médicaux et les patients, réduisant les déplacements des patients et les communications téléphoniques.
 
+Cette numérisation a permis d’accéder en tout temps à la possibilité de prendre rendez-vous et d’accéder à une cartographie de l’ensemble des professionnels de santé aux alentours. Cependant, cette diminution du contact avec les secrétariats médicaux a des conséquences, dans un premier temps, il y a les personnes qui sont néophytes ou qui n’ont pas accès au numérique auront beaucoup plus de difficulté à prendre rendez-vous, dans un second temps, le personnel des secrétariats médicaux étaient formées à qualifier l’urgence des situations des rendez-vous, ce que l’algorithme de Doctolib n’est pas en capacité de faire.
 
 L’application la plus populaire en France estime avoir 17 millions de rendez-vous pris en ligne par mois. Malgré la facilitation de la prise de rendez-vous, il n’y a pas eu d’effet rebond car il y a un plafond qui correspond au nombre de médecins, qui stagne voire décroît. La plateforme à permis d’optimiser les plannings, remplir les annulations et la réduction de la friction de la prise de rendez-vous (prendre rendez-vous quand on veux, ou on veux, pour le motifs qu’on veut.
 
@@ -25,6 +28,7 @@ D’un côté les plateformes de rendez-vous médical ont permis de réduire les
 ## Scénarios d’usage et impacts
 
 Nous faisons l’hypothèse que l’application peut être consultée à n’importe quel moment de la journée.
+
 ## Scénario : “Consulter un médecin généraliste”
 
 - Le patient se rend sur la page de son médecin traitant généraliste (donc sans passer par un moteur de recherche).
@@ -51,16 +55,16 @@ L'EcoIndex d'une page (de A à G) est calculé (sources : GreenIT) en fonction d
 
 Nous avons choisi de comparer l'impact des scénarios sur les services de prises de rendez-vous médicaux : Doctolib, Maiia, Keldoc et ClickDoc, qui sont des services de rendez-vous médicaux en France.
 
-|                        **Scénario**                       	| **Service** 	| **Score** 	| **Classe** 	|                                            **Détails**                                           	|
-|:---------------------------------------------------------:	|:-----------:	|:---------:	|:----------:	|:------------------------------------------------------------------------------------------------:	|
-| Scénario 1 : Consulter un médecin généraliste             	| Doctolib    	| 21        	| F  🟥      	| Docteur généraliste A : 28 (E)<br>Liste docteurs : 17 (F)<br>Docteur généraliste B : 19 (F)      	|
-|                                                           	| Maiia       	| 20        	| F  🟥      	| Docteur généraliste A : 14 (F)<br>Liste docteurs : 26 (E)<br>Docteur généraliste B : 21 (F)      	|
-|                                                           	| KelDoc       	| 56        	| C  🟨      	| Docteur généraliste A : 60 (C)<br>Liste docteurs : 52 (D)<br>Docteur généraliste B : 56 (C)      	|
-|                                                           	| ClickDoc     	| 25        	| E  🟧      	| Docteur généraliste A : 30 (E)<br>Liste docteurs : 15 (F)<br>Docteur généraliste B : 32 (E)      	|
-| Scénario 2 : <br>Consulter les informations d’un dentiste 	| Doctolib    	| 33        	| E  🟧      	| Liste dentiste : 33 (E)<br>Dentiste A : 60 (C)<br>Liste dentiste : 26 (E)<br>Dentiste B : 16 (F) 	|
-|                                                           	| Maiia       	| 25        	| E  🟧      	| Liste dentiste : 16 (F)<br>Dentiste A : 30 (E)<br>Liste dentiste : 19 (F)<br>Dentiste B : 35 (E) 	|
-|                                                           	| Keldoc       	| 60        	| C  🟨      	| Liste dentiste : 60 (C)<br>Dentiste A : 52 (D)<br>Liste dentiste : 63 (C)<br>Dentiste B : 57 (C) 	|
-|                                                           	| ClickDoc     	| 23        	| F  🟥      	| Liste dentiste : 31 (E)<br>Dentiste A : 15 (F)<br>Liste dentiste : 31 (E)<br>Dentiste B : 17 (F) 	|
+|                       **Scénario**                        | **Service** | **Score** | **Classe** |                                           **Détails**                                            |
+| :-------------------------------------------------------: | :---------: | :-------: | :--------: | :----------------------------------------------------------------------------------------------: |
+|       Scénario 1 : Consulter un médecin généraliste       |  Doctolib   |    21     |    F 🟥    |   Docteur généraliste A : 28 (E)<br>Liste docteurs : 17 (F)<br>Docteur généraliste B : 19 (F)    |
+|                                                           |    Maiia    |    20     |    F 🟥    |   Docteur généraliste A : 14 (F)<br>Liste docteurs : 26 (E)<br>Docteur généraliste B : 21 (F)    |
+|                                                           |   KelDoc    |    56     |    C 🟨    |   Docteur généraliste A : 60 (C)<br>Liste docteurs : 52 (D)<br>Docteur généraliste B : 56 (C)    |
+|                                                           |  ClickDoc   |    25     |    E 🟧    |   Docteur généraliste A : 30 (E)<br>Liste docteurs : 15 (F)<br>Docteur généraliste B : 32 (E)    |
+| Scénario 2 : <br>Consulter les informations d’un dentiste |  Doctolib   |    33     |    E 🟧    | Liste dentiste : 33 (E)<br>Dentiste A : 60 (C)<br>Liste dentiste : 26 (E)<br>Dentiste B : 16 (F) |
+|                                                           |    Maiia    |    25     |    E 🟧    | Liste dentiste : 16 (F)<br>Dentiste A : 30 (E)<br>Liste dentiste : 19 (F)<br>Dentiste B : 35 (E) |
+|                                                           |   Keldoc    |    60     |    C 🟨    | Liste dentiste : 60 (C)<br>Dentiste A : 52 (D)<br>Liste dentiste : 63 (C)<br>Dentiste B : 57 (C) |
+|                                                           |  ClickDoc   |    23     |    F 🟥    | Liste dentiste : 31 (E)<br>Dentiste A : 15 (F)<br>Liste dentiste : 31 (E)<br>Dentiste B : 17 (F) |
 
 Tab.1 : Mesure de l'EcoIndex moyen de services de prise de rendez-vous médicaux.
 
@@ -84,12 +88,12 @@ Notons d'abord que le marché de la prise de rendez-vous médicaux en ligne est 
 \- un accès gratuit pour les patients (recherche, consultation des créneaux, prise de rendez-vous) ;  
 \- un abonnement mensuel payé par les professionnels de santé, avec des modules optionnels.
 
-| Service | Offre de base | Modules complémentaires |
-| :---: | ----- | ----- |
+| Service  | Offre de base                                                           | Modules complémentaires                                                                                                                    |
+| :------: | ----------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
 | Doctolib | Agenda; Prise de RDV en ligne 24h/24; Rappels SMS/mail; Liste d’attente | Logiciel Doctolib Médecin; Téléconsultation; Assistant de consultation IA ;Assistant téléphonique IA; Aide à la prescription; Vidal Expert |
-| Maiia | Agenda; Prise de RDV en ligne 24h/24; Rappels SMS/mail; Espace patient | Logiciel Maiia Médecin; Téléconsultation / télésoin;  Secrétariat IA ;Téléexpertise Maiia Compta; Maiia Bilan; Messagerie Maiia Connect |
-| Clickdoc | Agenda en ligne; Prise de RDV en ligne; Rappels SMS  | Téléconsultation; Télésecrétariat; Assistant de consultation IA; Assistant téléphonique IA |
-| Keldoc | Agenda; Prise de RDV en ligne; Visibilité en ligne; Rappels SMS | RDV en téléconsultation;  Portail Praticiens; Portail Patients; Référencement Pages Jaunes |
+|  Maiia   | Agenda; Prise de RDV en ligne 24h/24; Rappels SMS/mail; Espace patient  | Logiciel Maiia Médecin; Téléconsultation / télésoin; Secrétariat IA ;Téléexpertise Maiia Compta; Maiia Bilan; Messagerie Maiia Connect     |
+| Clickdoc | Agenda en ligne; Prise de RDV en ligne; Rappels SMS                     | Téléconsultation; Télésecrétariat; Assistant de consultation IA; Assistant téléphonique IA                                                 |
+|  Keldoc  | Agenda; Prise de RDV en ligne; Visibilité en ligne; Rappels SMS         | RDV en téléconsultation; Portail Praticiens; Portail Patients; Référencement Pages Jaunes                                                  |
 
 Tab. 2 : Offre des services de prise de rendez-vous médicaux.
 
@@ -98,15 +102,16 @@ Certains acteurs se démarquent avec les modules complémentaires apportés ains
 L’étude de l’offre des services de prises de rendez-vous médicaux nous a permis d’identifier qu’il n’existe qu’une seule source de revenus qui est l’offre Premium, qui parfois est accompagnée de modules complémentaires.
 
 | Source possible de revenus | Montant unitaire | Quantité nécessaire pour financer un salaire |
-| :---- | :---- | :---- |
-| Abonnement premium | 69 € | 50,8 |
+| :------------------------- | :--------------- | :------------------------------------------- |
+| Abonnement premium         | 69 €             | 50,8                                         |
 
 Tab. 3 : Source de revenus possibles pour le service d'une plateforme de rendez-vous médicaux.
 
 Basé sur l'abonnement mensuel de Maiia (https://www.getapp.fr/software/161411/maiia)  
-Basé sur le coût total employeur du salaire médian 2026 soit 3507€ environ (source : URSSAF). 
+Basé sur le coût total employeur du salaire médian 2026 soit 3507€ environ (source : URSSAF).
 
-Par conséquent, pour réduire l’impact écologique, nous proposons de :   
+Par conséquent, pour réduire l’impact écologique, nous proposons de :
+
 - Travailler l'optimisation des fichiers CSS
 - Travailler l'optimisation des requêtes HTTP
 - Travailler l'optimisation du nombre de domaines
@@ -116,15 +121,70 @@ Par conséquent, pour réduire l’impact écologique, nous proposons de :
 Au vu des différents services comparés, des exigences environnementales données plus haut et des scénarios mis en place, nous allons définir pour notre prototype une maquette de l'interface et un échantillon de données réalistes.
 
 Selon les standards du Web, nos « écrans » sont la représentation HTML des types de ressources du domaine :
-* Un annuaire des praticiens (avec une HTTP-URI qui a pour chemin `/`) ou plus spécifiquement avec une barre de recherche permettant un affichage plus précis (avec pour chemin `/?search={type||name}`),
-* Un praticien en particulier (avec pour chemin `/{id}`
+
+- Un annuaire des praticiens (avec une HTTP-URI qui a pour chemin `/`) ou plus spécifiquement avec une barre de recherche permettant un affichage plus précis (avec pour chemin `/?search={type||name}`),
+- Un praticien en particulier (avec pour chemin `/{id}`
 
 ![Maquette de l'annuaire des praticiens](./docs/mockup_1.png)
-__Fig. 1__: Maquette de l'interface du prototype : Annuaire des praticiens.
-
+**Fig. 1**: Maquette de l'interface du prototype : Annuaire des praticiens.
 
 ![Maquette de l'annuaire des praticiens](./docs/mockup_2.png)
-__Fig. 2__: Maquette de l'interface du prototype : Profil d'un praticient.
+**Fig. 2**: Maquette de l'interface du prototype : Profil d'un praticient.
 
 Pour des raisons de respect des droits d'auteurs, nous utilisons des données générées (avec [`dummy-json`](https://github.com/webroo/dummy-json/blob/master/README.md)).
 Bien que fictives, ces données correspondent à la structure des services concurrents : les praticiens ont un nom, un type de pratique, une description, ainsi que des créneaux occupés par des patients qui ont un nom.(voir [modèle de données](https://github.com/UTT-GL03/DoctoGreen/blob/main/praticien_data.hbs)).
+
+# Implémentation du scénario prioritaire
+
+## Étape de prototypage : Données chargées de manière statique
+
+Pour cette première version du prototype (v1.0.0) :
+
+- l'échantillon de données est encore chargé dans le code de manière statique,
+- les fonctionnalités implémentés ne sont que celles nécessaires pour suivre le scénario prioritaire ("Rechercher un médecin et afficher ses informations").
+
+Ce scénario nécessite de pouvoir naviguer entre deux types de pages : la page d'accueil avec la barre de recherche et la liste des médecins et les pages des détails des médecins.
+
+## Page d'accueil
+
+Nous avons développé la page d'accueil pour que ça affiche la liste des médecins comme prévu par la maquette mais également une barre de recherche qui filtre les médecins.
+
+![Screenshot de l'accueil](./docs/accueil_screenshot.png)
+
+On a choisi de partir avec Picocss pour avoir une mise en page très basique et légère.
+
+Pour la liste des médecins nous avons choisit d'afficher uniquement les informations essentiel à savoir :
+
+- Nom et prénom
+- Type de médecin
+- Description rapide de ce qu'il fait
+- Créneaux déjà pris
+
+On a choisi de ne pas mettre la photo des médecins dans cette liste car ce n'est pas utile, cela alourdirait grandement la page pour rien. Cependant elle reste visible avec la page de détails du médecin.
+
+|                       | EcoIndex | GES (gCO2e) | Taille du DOM | Requêtes | Taille de la page (ko) |
+| :-------------------- | :------- | :---------- | :------------ | :------- | :--------------------- |
+| Mode "développement"  | 52 🟨 C  | 1,96 gCO2e  | 446           | 25       | 5630                   |
+| Mode "pré-production" | 87 🟪 A  | 1,27 gCO2e  | 442           | 5        | 109                    |
+
+Tab.4 : Évaluation de l'impact entre le mode développement et pré-build sur la page d'accueil.
+
+## Page des détails des médecins
+
+Les pages des médecins ont pour HTTP-URI /{id}. Chaque médecin possède un ID unique.
+
+De même que précédemment, nous avons tenté d'implémenter cette page conformément à ce que prévoyait la maquette.
+
+![Screenshot des détails des médecins](./docs/details_screenshot.png)
+
+|                          | EcoIndex | GES (gCO2e) | Taille du DOM | Requêtes | Taille de la page (ko) |
+| :----------------------- | :------- | :---------- | :------------ | :------- | :--------------------- |
+| 1. Docteur généraliste A | 93 🟪 A  | 1,14 gCO2e  | 66            | 5        | 110                    |
+| 2. Liste docteurs        | 87 🟪 A  | 1,27 gCO2e  | 442           | 5        | 109                    |
+| 3. Docteur généraliste B | 93 🟪 A  | 1,14 gCO2e  | 57            | 6        | 110                    |
+
+Tab.5 : Évaluation de l'impact du scénario “Consulter un médecin généraliste”.
+
+On remarque que l'éco-index est très haut, cela est normal car les données sont chargées de manière statique. Mais on remarque que le nombre de requêtes et la taille de la page sont très inférieures à celles des services concurrents.
+
+Si on arrive à garder l'EcoIndex à A une fois le site déployé, cela montrerait que notre site pollue moins que ceux des services concurrents tout en offrant le même service principal.
