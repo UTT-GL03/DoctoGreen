@@ -58,24 +58,13 @@ function Praticien({ id, name, type, description, creneaux = [] }) {
   return (
     <article className="doctor-card">
       <header>
-        <span className="doctor-label">Praticien</span>
+        <span className="doctor-label">{type}</span>
         <h3>
           <Link to={`/${id}`}>{name}</Link>
         </h3>
       </header>
 
-      <p className="doctor-type">{type}</p>
       <p className="doctor-address">{description}</p>
-
-      {creneaux.length > 0 && (
-        <ul className="appointment-list">
-          {creneaux.map((slot, index) => (
-            <li key={`${slot.date}-${index}`}>
-              {slot.date} à {slot.heure} : {slot.patientName}
-            </li>
-          ))}
-        </ul>
-      )}
     </article>
   );
 }

@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import dayjs from "dayjs";
 import "dayjs/locale/fr";
@@ -14,8 +15,11 @@ function formatCreneau(date, heure) {
   return `${capitalizedDate} à ${heure}`;
 }
 
+const crenauxTemplate = ["08:00", "08:30", "09:00", "09:30", "10:00", "10:30", "11:00", "11:30", "14:00", "14:30", "15:00", "15:30", "16:00", "16:30", "17:00", "17:30"];
+
 function Praticien() {
   const { id } = useParams();
+  const [decalage, setDecalage] = useState(0);
   const praticien = data.praticiens.find((item) => item.id === id);
 
   if (!praticien) {
@@ -28,6 +32,15 @@ function Praticien() {
   }
 
   const { name, type, description, creneaux = [] } = praticien;
+
+  const dates = [];
+  for (let i = 0; i < 5; i++) {
+    dates.push(dayjs().add(decalage + i, "day").format("YYYY-MM-DD"));
+  }
+
+  function estPris(date, heure) {
+    return creneaux.some((c) => c.date === date && c.heure === heure);
+  }
 
   return (
     <main>
@@ -60,18 +73,52 @@ function Praticien() {
         </div>
       </article>
 
-      <div className="grid timeslot-grid">
-        {creneaux.map((creneau, index) => (
+      <section>
+        <h2>Prendre rendez-vous</h2>
+
+        <div className="timeslot-nav">
           <button
-            className="timeslot"
             type="button"
-            key={`${creneau.date}-${creneau.heure}-${index}`}
+            onClick={() => setDecalage(decalage - NB_JOURS)}
+            disabled={decalage === 0}
           >
-            <span>{dayjs(creneau.date).format("DD/MM/YYYY")}</span>
-            <span>à {creneau.heure}</span>
+            Précédent
           </button>
-        ))}
-      </div>
+          <button type="button" onClick={() => setDecalage(decalage + NB_JOURS)}>
+            Suivant
+          </button>
+        </div>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Heure</th>
+              {dates.map((date) => (
+                <th key={date}>{dayjs(date).format("ddd DD/MM")}</th>
+              ))}
+            </tr>
+          </thead>
+          <tbody>
+            {crenauxTemplate.map((heure) => (
+              <tr key={heure}>
+                <td>{heure}</td>
+                {dates.map((date) => (
+                  <td key={date}>
+                    <button
+                      type="button"
+                      className={estPris(date, heure) ? "timeslot-pris" : ""}
+                      disabled={estPris(date, heure)}
+                      title={formatCreneau(date, heure)}
+                    >
+                      {estPris(date, heure) ? "Pris" : "Libre"}
+                    </button>
+                  </td>
+                ))}
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </section>
 
       <Link to="/">Retour à l'annuaire</Link>
     </main>
