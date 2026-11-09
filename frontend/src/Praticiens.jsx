@@ -15,6 +15,16 @@ function Praticiens() {
       });
   }, []);
 
+  const praticiensFiltres = useMemo(() => {
+    const recherche = search.trim().toLowerCase();
+
+    return praticiens.filter((praticien) =>
+      `${praticien.name} ${praticien.type} ${praticien.description}`
+        .toLowerCase()
+        .includes(recherche),
+    );
+  }, [praticiens, search]);
+
   return (
     <main>
       <section className="search-section" aria-labelledby="search-title">
@@ -34,11 +44,11 @@ function Praticiens() {
         <h2 id="doctors-title">Liste praticien proche</h2>
 
         <div className="doctor-list">
-          {praticiens.map((praticien) => (
+          {praticiensFiltres.map((praticien) => (
             <Praticien {...praticien} key={praticien.id} />
           ))}
 
-          {praticiens.length === 0 && (
+          {praticiensFiltres.length === 0 && (
             <p className="empty-state">Aucun praticien trouvé.</p>
           )}
         </div>

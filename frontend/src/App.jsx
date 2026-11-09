@@ -15,12 +15,6 @@ function App() {
             <a role="button" href="/">
               Accueil
             </a>
-            <a role="button" href="/connexion">
-              Se connecter
-            </a>
-            <a role="button" href="/inscription">
-              S'inscrire
-            </a>
           </div>
         </nav>
 
