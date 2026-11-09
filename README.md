@@ -188,3 +188,9 @@ Tab.5 : Évaluation de l'impact du scénario “Consulter un médecin générali
 On remarque que l'éco-index est très haut, cela est normal car les données sont chargées de manière statique. Mais on remarque que le nombre de requêtes et la taille de la page sont très inférieures à celles des services concurrents.
 
 Si on arrive à garder l'EcoIndex à A une fois le site déployé, cela montrerait que notre site pollue moins que ceux des services concurrents tout en offrant le même service principal.
+
+### Étape de prototypage : Données statiques chargées de manière dynamique
+
+Pour cette nouvelle version du prototype (`v1.0.1`), identique du point de vue fonctionnel, les données (toujours statiques) sont désormais chargées par le _frontend_ à travers le réseau immédiatement après un premier affichage à vide. Ce comportement, plus réaliste, n'a pour effet qu'une requête supplémentaire par page affichée.
+
+Concernant l'évaluation de l'impact environnemental du scénario, par rapport au tableau précédent (cf. Tab.5), à l'exception du nombre de requêtes qui est incrémenté de 1, les résultats sont strictement identiques.

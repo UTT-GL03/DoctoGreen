@@ -1,26 +1,19 @@
 import { useMemo } from "react";
 import { Link, useSearchParams } from "react-router-dom";
-import data from "./assets/praticien_data.json";
+import { useState, useEffect } from "react";
 
 function Praticiens() {
   const [searchParams, setSearchParams] = useSearchParams();
   const search = searchParams.get("search") ?? "";
+  const [praticiens, setPraticiens] = useState([]);
 
-  const praticiens = useMemo(() => {
-    const query = search.trim().toLowerCase();
-
-    if (!query) {
-      return data.praticiens;
-    }
-
-    return data.praticiens.filter((praticien) =>
-      [praticien.name, praticien.type, praticien.description]
-        .filter(Boolean)
-        .join(" ")
-        .toLowerCase()
-        .includes(query),
-    );
-  }, [search]);
+  useEffect(() => {
+    fetch("/praticien_data.json")
+      .then((x) => x.json())
+      .then((data) => {
+        setPraticiens(data.praticiens);
+      });
+  }, []);
 
   return (
     <main>

@@ -1,9 +1,8 @@
-import { useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import dayjs from "dayjs";
 import "dayjs/locale/fr";
-import data from "./assets/praticien_data.json";
 import "./App.css";
+import { useState, useEffect } from "react";
 
 dayjs.locale("fr");
 
@@ -15,27 +14,47 @@ function formatCreneau(date, heure) {
   return `${capitalizedDate} à ${heure}`;
 }
 
-const crenauxTemplate = ["08:00", "08:30", "09:00", "09:30", "10:00", "10:30", "11:00", "11:30", "14:00", "14:30", "15:00", "15:30", "16:00", "16:30", "17:00", "17:30"];
+const crenauxTemplate = [
+  "08:00",
+  "08:30",
+  "09:00",
+  "09:30",
+  "10:00",
+  "10:30",
+  "11:00",
+  "11:30",
+  "14:00",
+  "14:30",
+  "15:00",
+  "15:30",
+  "16:00",
+  "16:30",
+  "17:00",
+  "17:30",
+];
 
 function Praticien() {
   const { id } = useParams();
   const [decalage, setDecalage] = useState(0);
-  const praticien = data.praticiens.find((item) => item.id === id);
+  const [praticien, setPraticien] = useState({});
 
-  if (!praticien) {
-    return (
-      <main>
-        <h1>Praticien introuvable</h1>
-        <Link to="/">Retour à l'annuaire</Link>
-      </main>
-    );
-  }
+  useEffect(() => {
+    fetch("/praticien_data.json")
+      .then((x) => x.json())
+      .then((data) => {
+        setPraticien(data.praticiens.find((item) => item.id === id));
+      });
+  }, [id]);
 
   const { name, type, description, creneaux = [] } = praticien;
 
   const dates = [];
   for (let i = 0; i < 5; i++) {
-    dates.push(dayjs().add(decalage + i, "day").format("YYYY-MM-DD"));
+    dates.push(
+      dayjs()
+        .add(decalage + i, "day")
+        .format("YYYY-MM-DD"),
+    );
   }
 
   function estPris(date, heure) {
