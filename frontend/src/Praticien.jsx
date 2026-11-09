@@ -79,12 +79,12 @@ function Praticien() {
         <div className="timeslot-nav">
           <button
             type="button"
-            onClick={() => setDecalage(decalage - NB_JOURS)}
+            onClick={() => setDecalage(decalage - 5)}
             disabled={decalage === 0}
           >
             Précédent
           </button>
-          <button type="button" onClick={() => setDecalage(decalage + NB_JOURS)}>
+          <button type="button" onClick={() => setDecalage(decalage + 5)}>
             Suivant
           </button>
         </div>
@@ -94,7 +94,7 @@ function Praticien() {
             <tr>
               <th>Heure</th>
               {dates.map((date) => (
-                <th key={date}>{dayjs(date).format("ddd DD/MM")}</th>
+                <th key={date}>{dayjs(date).format("ddd DD/MM/YY")}</th>
               ))}
             </tr>
           </thead>
