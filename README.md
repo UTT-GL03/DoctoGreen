@@ -197,9 +197,25 @@ Concernant l'évaluation de l'impact environnemental du scénario, par rapport a
 
 ## Mesures de la consommation énergétique lors du passage à l'échelle
 
-Maintenant que notre prototype est réaliste en termes de nombre de requêtes, nous pouvons simuler les effets du "passage à l'échelle". 
+Maintenant que notre prototype est réaliste en termes de nombre de requêtes, nous pouvons simuler les effets du "passage à l'échelle".
 
 Dans le cas d'un service de prise de rendez-vous médical et dans le cadre des fonctionnalités comme la recherche en de médecin en ligne et la prise de rendez-vous, l'augmentation de la quantité des données à traiter ne viendra pas de l'augmentation du nombre de patient.
 Par contre, il est nécessaire d'avoir accès aux plannings des médecins pour pouvoir prendre rendez-vous.
 
 Le volume des rendez-vous pris sera la principale évolution de notre système, contrairement aux nombres de médecins qui lui peut évoluer occasionnellement. Étant donné que nous stockons tous les rendez-vous pris, cela dépendra du nombre de rendez-vous pour chaque médecin.
+
+### Évolution de l'EcoIndex lors du passage à l'échelle
+
+Produites désormais de manière automatique lors de l'intégration continue, les mesures nécessaires à la production de l'EcoIndex et la simulation du passage à l'échelle retraduisent bien (cf. Tab.6) la très forte augmentation du poids des téléchargements (qui passent d'environ 110 ko à plus de 4 Mo), mais aussi l'augmentation du nombre d'éléments du DOM, particulièrement sur la page listant les docteurs.
+
+|                          | EcoIndex                       | GES (gCO2e)                    | Taille du DOM          | Requêtes             | Taille de la page (ko)  |
+| :----------------------- | :----------------------------- | :----------------------------- | :--------------------- | :------------------- | :---------------------- |
+| 1. Docteur généraliste A | <del>93 A 🟪</del><br/>69 🟩 B | <del>1,14</del><br/>1,62 gCO2e | <del>66</del><br/>240  | <del>198</del><br/>5 | <del>110</del><br/>4021 |
+| 2. Liste docteurs        | <del>87 A 🟪</del><br/>51 🟨 C | <del>1,27</del><br/>1,98 gCO2e | <del>198</del><br/>442 | <del>198</del><br/>5 | <del>109</del><br/>4010 |
+| 3. Docteur généraliste B | <del>93 A 🟪</del><br/>73 🟩 B | <del>1,14</del><br/>1,54 gCO2e | <del>57</del><br/>119  | <del>198</del><br/>6 | <del>110</del><br/>4010 |
+
+**Tab.6**: Effet du passage à l'échelle sur l'impact du scénario "Consulter la liste et les profils de docteurs" dans le prototype v1.0.1.
+
+On pourrait s'étonner que la baisse de l'EcoIndex soit beaucoup plus forte pour la page de la liste des docteurs (passant de la note A à C) que pour la page d'un profil individuel (restant en note B), alors que l'augmentation du poids des téléchargements est analogue dans les deux cas.
+
+Ceci s'explique par le fait que l'EcoIndex vise à évaluer un impact global, incluant une part de la fabrication et de la fin de vie des terminaux, et que cette part augmente de façon proportionnelle avec le nombre d'éléments de la page (le DOM atteignant 442 éléments pour la liste, contre seulement 119 à 240 pour les profils individuels).
