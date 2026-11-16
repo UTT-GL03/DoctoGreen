@@ -1,15 +1,30 @@
 {
   "praticiens": [
-    {{#repeat min=2 max=6}}
+    {
+      "id": "1de2cc29-8ee7-4891-ae78-dad162df2021",
+      "name": "{{firstName}} {{lastName}}",
+      "type": "Médecin généraliste",
+      "description": "{{lorem min=10 max=60}}",
+      "creneaux": [
+        {{#repeat min=200 max=350}}
+        {
+          "date": "{{date '2026-11-15' '2026-12-30' 'YYYY-MM-DD'}}",
+          "heure": "{{random '08:00' '08:30' '09:00' '09:30' '10:00' '10:30' '11:00' '11:30' '14:00' '14:30' '15:00' '15:30' '16:00' '16:30' '17:00' '17:30'}}",
+          "patientName": "{{firstName}} {{lastName}}"
+        }
+        {{/repeat}}
+      ]
+    },
+    {{#repeat 15}}
     {
       "id": "generaliste-{{@index}}",
       "name": "{{firstName}} {{lastName}}",
       "type": "Médecin généraliste",
       "description": "{{lorem min=10 max=60}}",
       "creneaux": [
-        {{#repeat min=3 max=10}}
+        {{#repeat min=200 max=350}}
         {
-          "date": "{{date '2026-10-13' '2026-11-30' 'YYYY-MM-DD'}}",
+          "date": "{{date '2026-11-15' '2026-12-30' 'YYYY-MM-DD'}}",
           "heure": "{{random '08:00' '08:30' '09:00' '09:30' '10:00' '10:30' '11:00' '11:30' '14:00' '14:30' '15:00' '15:30' '16:00' '16:30' '17:00' '17:30'}}",
           "patientName": "{{firstName}} {{lastName}}"
         }
@@ -17,16 +32,16 @@
       ]
     }
     {{/repeat}},
-    {{#repeat min=2 max=6}}
+    {{#repeat 15}}
     {
       "id": "dentiste-{{@index}}",
       "name": "{{firstName}} {{lastName}}",
       "type": "Dentiste",
       "description": "{{lorem min=10 max=60}}",
       "creneaux": [
-        {{#repeat min=3 max=10}}
+        {{#repeat min=200 max=350}}
         {
-          "date": "{{date '2026-10-13' '2026-11-30' 'YYYY-MM-DD'}}",
+          "date": "{{date '2026-11-15' '2026-12-30' 'YYYY-MM-DD'}}",
           "heure": "{{random '08:00' '08:30' '09:00' '09:30' '10:00' '10:30' '11:00' '11:30' '14:00' '14:30' '15:00' '15:30' '16:00' '16:30' '17:00' '17:30'}}",
           "patientName": "{{firstName}} {{lastName}}"
         }
@@ -41,9 +56,9 @@
       "type": "{{random 'Chirurgien' 'Dermatologue' 'Kinésithérapeute' 'Infirmier' 'Allergologue' 'Psychologue'}}",
       "description": "{{lorem min=10 max=60}}",
       "creneaux": [
-        {{#repeat min=3 max=10}}
+        {{#repeat min=200 max=350}}
         {
-          "date": "{{date '2026-10-13' '2026-11-30' 'YYYY-MM-DD'}}",
+          "date": "{{date '2026-11-15' '2026-12-30' 'YYYY-MM-DD'}}",
           "heure": "{{random '08:00' '08:30' '09:00' '09:30' '10:00' '10:30' '11:00' '11:30' '14:00' '14:30' '15:00' '15:30' '16:00' '16:30' '17:00' '17:30'}}",
           "patientName": "{{firstName}} {{lastName}}"
         }

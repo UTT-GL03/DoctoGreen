@@ -51,4 +51,3 @@ jobs:
           path: |
             Consulterlesinformationsd'undentiste.html
             Consulterunmedecingeneraliste.html
-            frontend/public/praticien_data.json
