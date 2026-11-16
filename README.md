@@ -208,11 +208,11 @@ Le volume des rendez-vous pris sera la principale évolution de notre système, 
 
 Produites désormais de manière automatique lors de l'intégration continue, les mesures nécessaires à la production de l'EcoIndex et la simulation du passage à l'échelle retraduisent bien (cf. Tab.6) la très forte augmentation du poids des téléchargements (qui passent d'environ 110 ko à plus de 4 Mo), mais aussi l'augmentation du nombre d'éléments du DOM, particulièrement sur la page listant les docteurs.
 
-|                          | EcoIndex                       | GES (gCO2e)                    | Taille du DOM          | Requêtes             | Taille de la page (ko)  |
-| :----------------------- | :----------------------------- | :----------------------------- | :--------------------- | :------------------- | :---------------------- |
-| 1. Docteur généraliste A | <del>93 A 🟪</del><br/>69 🟩 B | <del>1,14</del><br/>1,62 gCO2e | <del>66</del><br/>240  | <del>198</del><br/>5 | <del>110</del><br/>4021 |
-| 2. Liste docteurs        | <del>87 A 🟪</del><br/>51 🟨 C | <del>1,27</del><br/>1,98 gCO2e | <del>198</del><br/>442 | <del>198</del><br/>5 | <del>109</del><br/>4010 |
-| 3. Docteur généraliste B | <del>93 A 🟪</del><br/>73 🟩 B | <del>1,14</del><br/>1,54 gCO2e | <del>57</del><br/>119  | <del>198</del><br/>6 | <del>110</del><br/>4010 |
+|                          | EcoIndex                        | GES (gCO2e)                    | Taille du DOM          | Requêtes             | Taille de la page (ko)  |
+| :----------------------- | :------------------------------ | :----------------------------- | :--------------------- | :------------------- | :---------------------- |
+| 1. Docteur généraliste A | <del>93 🟪 A </del><br/>69 🟩 B | <del>1,14</del><br/>1,62 gCO2e | <del>66</del><br/>240  | <del>198</del><br/>5 | <del>110</del><br/>4021 |
+| 2. Liste docteurs        | <del>87 🟪 A </del><br/>51 🟨 C | <del>1,27</del><br/>1,98 gCO2e | <del>198</del><br/>442 | <del>198</del><br/>5 | <del>109</del><br/>4010 |
+| 3. Docteur généraliste B | <del>93 🟪A </del><br/>73 🟩 B  | <del>1,14</del><br/>1,54 gCO2e | <del>57</del><br/>119  | <del>198</del><br/>6 | <del>110</del><br/>4010 |
 
 **Tab.6**: Effet du passage à l'échelle sur l'impact du scénario "Consulter la liste et les profils de docteurs" dans le prototype v1.0.1.
 
