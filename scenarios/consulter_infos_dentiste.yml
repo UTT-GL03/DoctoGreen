@@ -1,0 +1,33 @@
+- name: "Consulter les informations d'un dentiste"
+  url: 'http://localhost:80/'
+  waitForSelector: '.doctor-card'
+  actions:
+    - name: 'Recherche des dentistes'
+      type: 'text'
+      element: '#doctor-search'
+      content: 'dentiste'
+      waitForTimeout: 500
+
+    - name: 'Ouverture du premier dentiste'
+      type: 'click'
+      element: '.doctor-list article:nth-of-type(1) h3 a'
+      pageChange: true
+      waitForTimeout: 1500
+
+    - name: "Retour à l'accueil"
+      type: 'click'
+      element: 'nav a[role="button"]'
+      pageChange: true
+      waitForSelector: '.doctor-card'
+
+    - name: 'Recherche des dentistes'
+      type: 'text'
+      element: '#doctor-search'
+      content: 'dentiste'
+      waitForTimeout: 500
+
+    - name: 'Ouverture du second dentiste'
+      type: 'click'
+      element: '.doctor-list article:nth-of-type(2) h3 a'
+      pageChange: true
+      waitForTimeout: 1500
