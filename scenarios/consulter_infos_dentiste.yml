@@ -6,13 +6,12 @@
       type: 'text'
       element: '#doctor-search'
       content: 'dentiste'
-      waitForTimeout: 500
+      waitForSelector: .grid
 
     - name: 'Ouverture du premier dentiste'
       type: 'click'
       element: '.doctor-list article:nth-of-type(1) h3 a'
       pageChange: true
-      waitForTimeout: 1500
 
     - name: "Retour à l'accueil"
       type: 'click'
@@ -24,10 +23,8 @@
       type: 'text'
       element: '#doctor-search'
       content: 'dentiste'
-      waitForTimeout: 500
 
     - name: 'Ouverture du second dentiste'
       type: 'click'
       element: '.doctor-list article:nth-of-type(2) h3 a'
       pageChange: true
-      waitForTimeout: 1500

@@ -1,6 +1,6 @@
 - name: 'Consulter un médecin généraliste'
   url: 'http://localhost:80/1de2cc29-8ee7-4891-ae78-dad162df2021'
-  waitForTimeout: 1500
+  waitForSelector: .grid
   actions:
     - name: "Regarder les crénaux d'une autre semaine"
       type: 'click'
@@ -17,15 +17,12 @@
       type: 'text'
       element: '#doctor-search'
       content: 'généraliste'
-      waitForTimeout: 500
 
     - name: "Ouvrir le profil d'un second médecin généraliste"
       type: 'click'
       element: '.doctor-list article:nth-of-type(2) h3 a'
       pageChange: true
-      waitForTimeout: 1500
 
     - name: 'Consultation de ses créneaux'
       type: 'click'
       element: '.timeslot-nav button:last-of-type'
-      waitForTimeout: 500
