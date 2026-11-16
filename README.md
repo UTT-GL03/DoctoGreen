@@ -189,8 +189,17 @@ On remarque que l'éco-index est très haut, cela est normal car les données so
 
 Si on arrive à garder l'EcoIndex à A une fois le site déployé, cela montrerait que notre site pollue moins que ceux des services concurrents tout en offrant le même service principal.
 
-### Étape de prototypage : Données statiques chargées de manière dynamique
+## Étape de prototypage : Données statiques chargées de manière dynamique
 
 Pour cette nouvelle version du prototype (`v1.0.1`), identique du point de vue fonctionnel, les données (toujours statiques) sont désormais chargées par le _frontend_ à travers le réseau immédiatement après un premier affichage à vide. Ce comportement, plus réaliste, n'a pour effet qu'une requête supplémentaire par page affichée.
 
 Concernant l'évaluation de l'impact environnemental du scénario, par rapport au tableau précédent (cf. Tab.5), à l'exception du nombre de requêtes qui est incrémenté de 1, les résultats sont strictement identiques.
+
+## Mesures de la consommation énergétique lors du passage à l'échelle
+
+Maintenant que notre prototype est réaliste en termes de nombre de requêtes, nous pouvons simuler les effets du "passage à l'échelle". 
+
+Dans le cas d'un service de prise de rendez-vous médical et dans le cadre des fonctionnalités comme la recherche en de médecin en ligne et la prise de rendez-vous, l'augmentation de la quantité des données à traiter ne viendra pas de l'augmentation du nombre de patient.
+Par contre, il est nécessaire d'avoir accès aux plannings des médecins pour pouvoir prendre rendez-vous.
+
+Le volume des rendez-vous pris sera la principale évolution de notre système, contrairement aux nombres de médecins qui lui peut évoluer occasionnellement. Étant donné que nous stockons tous les rendez-vous pris, cela dépendra du nombre de rendez-vous pour chaque médecin.
