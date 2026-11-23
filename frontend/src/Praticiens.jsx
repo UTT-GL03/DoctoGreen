@@ -8,11 +8,15 @@ function Praticiens() {
   const [praticiens, setPraticiens] = useState([]);
 
   useEffect(() => {
-    fetch("/praticien_data.json")
-      .then((x) => x.json())
+    fetch("http://localhost:5984/doctogreen/_all_docs?include_docs=true")
+      .then((res) => res.json())
       .then((data) => {
-        setPraticiens(data.praticiens);
-      });
+        const docs = (data.rows ?? [])
+          .map((row) => row.doc)
+          .filter((doc) => doc && !doc._id.startsWith("_design/"));
+        setPraticiens(docs);
+      })
+      .catch((err) => console.error("Erreur CouchDB :", err));
   }, []);
 
   const praticiensFiltres = useMemo(() => {
@@ -45,7 +49,7 @@ function Praticiens() {
 
         <div className="doctor-list">
           {praticiensFiltres.map((praticien) => (
-            <Praticien {...praticien} key={praticien.id} />
+            <Praticien  id={praticien._id} {...praticien} key={praticien._id} />
           ))}
 
           {praticiensFiltres.length === 0 && (

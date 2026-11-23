@@ -219,3 +219,31 @@ Produites désormais de manière automatique lors de l'intégration continue, le
 On pourrait s'étonner que la baisse de l'EcoIndex soit beaucoup plus forte pour la page de la liste des docteurs (passant de la note A à C) que pour la page d'un profil individuel (restant en note B), alors que l'augmentation du poids des téléchargements est analogue dans les deux cas.
 
 Ceci s'explique par le fait que l'EcoIndex vise à évaluer un impact global, incluant une part de la fabrication et de la fin de vie des terminaux, et que cette part augmente de façon proportionnelle avec le nombre d'éléments de la page (le DOM atteignant 442 éléments pour la liste, contre seulement 119 à 240 pour les profils individuels).
+
+### Mesure de la consommation énergétique liée à la consultation
+
+Le logiciel GreenFrame est capable d'estimer, pour les différents composants de l'architecture, la consommation énergétique :
+
+- du CPU (à partir du temps de calcul),
+- de la mémoire vive (à partir de la taille des données mémorisées),
+- du disque (à partir de la taille des données lues et écrites),
+- du réseau (à partir de la taille des données reçues et envoyées),
+- pour le navigateur uniquement, de l'écran (à partir du temps d'exécution du scénario).
+
+ (a)                 | cpu (Wh)   | mem (Wh)   | disk (Wh) | network (Wh)       | screen (Wh) | total (Wh)   |
+| ------------------ | ---------- | ---------- | --------- | ------------------ | ----------- | ------------ | 
+| Navigateur         | 0.0029     | 0.000065   | 0.0       | <mark>0.0026</mark> | <mark>0.077</mark> | 0.082  |
+| Serveur Web        | 0.000025   | 0.000014   | 0.0       | <mark>0.0022</mark> | 0.0                | 0.0023 |
+
+| (b)                | cpu (Wh)   | mem (Wh)   | disk (Wh) | network (Wh)       | screen (Wh)        | total (Wh) |
+| ------------------ | ---------- | ---------- | --------- | ------------------ | ------------------ | ---------- | 
+| Navigateur         | 0.0013     |  0.000057  |  0.0      | <mark>0.0025</mark> | <mark>0.072</mark> |  0.076      |
+| Serveur Web        | 0.0000098   |  0.000013  |  0.0      | <mark>0.0022</mark> | 0.0                |  0.0023     |
+
+__Tab.7__: Estimation de la consommation énergétique de la consultation de la liste des praticiens (premier tableau) et du profil d'un praticien(second tableau).
+
+Les résultats (cf. Tab.7) montrent que le serveur web consomme autant pour la liste des 110 praticiens que pour le profil d'un seul praticien. Afficher beaucoup de données n'a donc presque aucun coût pour le serveur.
+
+L'essentiel de la consommation vient de l'écran du client : plus de 90 % du total, dans les deux cas. Cette valeur dépend du temps passé sur la page. Une page longue à lire garde donc l'écran allumé plus longtemps, ce qui augmente la consommation de façon indirecte.
+
+Le réseau du client et du serveur ainsi que le processeur du navigateur pèsent chacun très peu (environ 0,002 à 0,003 Wh).

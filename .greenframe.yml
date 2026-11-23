@@ -1,0 +1,10 @@
+baseURL: http://localhost
+projectName: DoctoGreen
+scenarios:
+  - name: Consulter la liste des praticiens
+    path: ./scenarios/consult_index.js
+  - name: Consulter le profil d'un praticien
+    path: ./scenarios/consult_praticien.js
+containers:
+  - doctogreen-static_hosting-1
+  - doctogreen-backend-1

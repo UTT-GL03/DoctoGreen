@@ -1,7 +1,7 @@
 {
-  "praticiens": [
+  "docs": [
     {
-      "id": "1de2cc29-8ee7-4891-ae78-dad162df2021",
+      "_id": "1de2cc29-8ee7-4891-ae78-dad162df2021",
       "name": "{{firstName}} {{lastName}}",
       "type": "Médecin généraliste",
       "description": "{{lorem min=10 max=60}}",
@@ -17,7 +17,7 @@
     },
     {{#repeat 15}}
     {
-      "id": "generaliste-{{@index}}",
+      "_id": "generaliste-{{@index}}",
       "name": "{{firstName}} {{lastName}}",
       "type": "Médecin généraliste",
       "description": "{{lorem min=10 max=60}}",
@@ -34,7 +34,7 @@
     {{/repeat}},
     {{#repeat 15}}
     {
-      "id": "dentiste-{{@index}}",
+      "_id": "dentiste-{{@index}}",
       "name": "{{firstName}} {{lastName}}",
       "type": "Dentiste",
       "description": "{{lorem min=10 max=60}}",
@@ -51,7 +51,7 @@
     {{/repeat}},
     {{#repeat 80}}
     {
-      "id": "{{guid}}",
+      "_id": "{{guid}}",
       "name": "{{firstName}} {{lastName}}",
       "type": "{{random 'Chirurgien' 'Dermatologue' 'Kinésithérapeute' 'Infirmier' 'Allergologue' 'Psychologue'}}",
       "description": "{{lorem min=10 max=60}}",

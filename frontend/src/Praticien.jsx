@@ -39,10 +39,10 @@ function Praticien() {
   const [praticien, setPraticien] = useState({});
 
   useEffect(() => {
-    fetch("/praticien_data.json")
+    fetch(`http://localhost:5984/doctogreen/${id}`)
       .then((x) => x.json())
       .then((data) => {
-        setPraticien(data.praticiens.find((item) => item.id === id));
+        setPraticien(data);
       });
   }, [id]);
 

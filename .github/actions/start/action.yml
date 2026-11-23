@@ -1,0 +1,26 @@
+runs:
+  using: composite
+  steps:
+    - name: Get frontend build
+      uses: actions/download-artifact@v4
+      with:
+        name: frontend-build
+        path: frontend/dist
+    - name: Start containers
+      run: |
+        export COUCHDB_USER="admin"
+        export COUCHDB_PASSWORD="admin"
+        docker compose up --detach
+      shell: bash
+    - name: Upload samples
+      run: |
+        curl -X POST http://localhost:5984/doctogreen/_bulk_docs -H "Content-Type: application/json" -d @praticien_data.json
+      shell: bash
+      - name: Get samples
+      uses: actions/download-artifact@v4
+      with:
+        name: samples
+    - name: Wait for backend
+      uses: docker://benel/wait-for-response:1
+      with:
+        args: http://localhost:5984/doctogreen/_all_docs 200 30000 500
